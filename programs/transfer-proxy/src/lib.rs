@@ -43,6 +43,7 @@ pub struct Initialize<'info> {
 pub struct Transfer<'info> {
     #[account(mut)]
     transfer_proxy_account: ProgramAccount<'info, TransferProxyAccount>,
+    #[account(signer)]
     from_pubkey: AccountInfo<'info>,
     #[account(mut)]
     to_pubkey: AccountInfo<'info>,
